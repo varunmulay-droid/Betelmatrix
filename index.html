@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betelmatrix - AI Agents for a Better India</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font Setup: Inter for a clean, professional, high-tech look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Very light slate background */
+        }
+        
+        /* INTELLIGENT COLOR THEME DEFINITION */
+        /* Primary: Deep Slate Blue (Corporate Trust, Professionalism) */
+        .bm-primary { color: #0f172a; } /* Slate-950 */
+        .bg-bm-primary { background-color: #0f172a; }
+        
+        /* Accent: Vibrant Cyan/Teal (Innovation, Digital Intelligence) */
+        .bm-accent { color: #06b6d4; } /* Cyan-600 */
+        .bg-bm-accent { background-color: #06b6d4; }
+        
+        /* Hero Gradient reflecting the new palette */
+        .bm-gradient-bg {
+            background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); /* Deep Slate to Blackish Blue */
+        }
+
+        /* Custom Logo Styling */
+        .logo-b {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            position: relative;
+            color: #ffffff;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom styles for the responsive portfolio cards */
+        .agent-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Defined border color for clean separation */
+            border: 1px solid #e2e8f0; 
+        }
+        .agent-card:hover {
+            transform: translateY(-5px);
+            /* Stronger, professional shadow on hover */
+            box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Utility for a subtle divider */
+        .separator {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #06b6d4; /* Accent color */
+            margin: 1.5rem auto;
+            border-radius: 9999px;
+        }
+        
+        /* Icon styling to match accent color */
+        .bm-icon {
+            color: #06b6d4;
+            width: 3rem;
+            height: 3rem;
+        }
+        .bm-metric-icon {
+             color: #06b6d4;
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <!-- Logo: High-Standard Text/Icon Design -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="logo-b bg-bm-primary w-11 h-11 rounded-lg flex items-center justify-center text-2xl font-extrabold shadow-md">B</div>
+                <span class="text-3xl font-extrabold text-bm-primary tracking-tight">Betelmatrix</span>
+                <span class="text-sm font-medium text-gray-500 hidden sm:inline-block border-l pl-3 ml-3">AI Agents</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-10">
+                <a href="#portfolio" class="text-gray-600 hover:text-bm-accent transition duration-300 font-medium py-1">Portfolio</a>
+                <a href="#metrics" class="text-gray-600 hover:text-bm-accent transition duration-300 font-medium py-1">Impact</a>
+                <a href="#mission" class="text-gray-600 hover:text-bm-accent transition duration-300 font-medium py-1">Mission</a>
+                <a href="#contact" class="text-gray-600 hover:text-bm-accent transition duration-300 font-medium py-1">Contact</a>
+            </nav>
+
+            
+            <!-- Mobile Menu Icon (Placeholder for larger application) -->
+            <button class="md:hidden text-gray-600 hover:text-bm-primary focus:outline-none">
+                <!-- Menu Icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bm-gradient-bg text-white py-24 md:py-40 px-4 shadow-2xl">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
+                Driving Growth with <span class="text-bm-accent font-black">Hyper-Local AI Agents</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light max-w-4xl mx-auto mb-10 opacity-90">
+                Betelmatrix deploys custom, compliant, and cost-effective Generative AI solutions tailored for the diverse Indian SME landscape.
+            </p>
+            <a href="#contact" class="bg-bm-accent text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.05] inline-block">
+                Schedule a Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Metrics Section (UPDATED) -->
+    <section id="metrics" class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-bm-primary mb-4">
+                Our Foundational Pillars of Value
+            </h2>
+            <div class="separator"></div>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                We focus on tangible, efficiency-driven results across compliance, economics, and cultural compatibility.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Metric 1: Compliance (Checkmark) -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <svg class="bm-metric-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.618a8 8 0 11-11.236 0 8 8 0 0111.236 0z"></path></svg>
+                    <p class="text-xl font-extrabold text-gray-800 mb-2">Guaranteed Compliance</p>
+                    <p class="text-sm text-gray-500">Zero-risk local regulatory and tax adherence</p>
+                </div>
+                <!-- Metric 2: ROI (Upward Trend) -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <svg class="bm-metric-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    <p class="text-xl font-extrabold text-gray-800 mb-2">Optimized Return</p>
+                    <p class="text-sm text-gray-500">Efficiency-driven operational savings and growth</p>
+                </div>
+                <!-- Metric 3: Language (Globe) -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <svg class="bm-metric-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"></path></svg>
+                    <p class="text-xl font-extrabold text-gray-800 mb-2">Native Language Support</p>
+                    <p class="text-sm text-gray-500">True local compatibility and communication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Agent Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-bm-primary mb-4">
+                Specialized AI Agent Deployments
+            </h2>
+            <div class="separator"></div>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-16">
+                Our custom agents are sector-specific, ensuring precision and deep integration into existing business workflows.
+            </p>
+
+            <!-- Agent Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Agent 1: Coffee Shops (Icon: Coffee) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18V9m0 9a2.25 2.25 0 00-2.25-2.25V9m2.25 9a2.25 2.25 0 012.25-2.25V9m-2.25 9H9a2.25 2.25 0 01-2.25-2.25V9m4.5 0V7.25M12 9h4.5M6 18h12a3 3 0 003-3V9a3 3 0 00-3-3H6a3 3 0 00-3 3v6a3 3 0 003 3z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'ChaiBot' Order Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Handles voice/text orders, dynamic menu pricing, and predictive stock replenishment for peak hours.
+                    </p>
+                    <span class="inline-block bg-cyan-100 text-cyan-800 text-xs font-medium px-3 py-1 rounded-full">F&B Automation</span>
+                </div>
+
+                <!-- Agent 2: Hotels & Lodging (Icon: Building) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6m-6 0h.01M5 10h14"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'Atithi' Guest Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Manages 24/7 check-ins, local tourism queries, and automated housekeeping scheduling via mobile app integration.
+                    </p>
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Hospitality Tech</span>
+                </div>
+
+                <!-- Agent 3: Book Stores (Icon: Book Open) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.6c-4.4 0-8-3.24-8-7.2s3.6-7.2 8-7.2 8 3.24 8 7.2-3.6 7.2-8 7.2zm0 0v-7.2m0-7.2V2m0 20v-4M8 14.4h8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'Grantha' Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Analyzes community reading trends, optimizes shelf layout for conversion, and handles digital content licensing.
+                    </p>
+                    <span class="inline-block bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">Niche Retail</span>
+                </div>
+
+                <!-- Agent 4: Cycle Stores (Icon: Bicycle) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17a5 5 0 100-10 5 5 0 000 10zM12 17v-4M6 10H4m14 0h2m-2-3H8m8 0v2M8 7v2m4-2V3M12 21V19"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'PedalPro' Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Predictive maintenance scheduling, integrated parts supply chain monitoring, and automated status updates to customers.
+                    </p>
+                    <span class="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">Service Management</span>
+                </div>
+                
+                <!-- Agent 5: Car Showrooms (Icon: Car) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0-14a7 7 0 017 7m0 0a1 1 0 110 2 1 1 0 010-2zm-7 7a1 1 0 110 2 1 1 0 010-2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'Vahaan' Prospect Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        AI-driven lead qualification, personalized financing options calculation, and automated scheduling for sales teams.
+                    </p>
+                    <span class="inline-block bg-red-100 text-red-800 text-xs font-medium px-3 py-1 rounded-full">High-Value Sales</span>
+                </div>
+
+                <!-- Agent 6: General SMEs (Icon: Shield) -->
+                <div class="agent-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="p-3 bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="bm-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.618a8 8 0 11-11.236 0 8 8 0 0111.236 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The 'Udyog' Compliance Agent</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Generates state-specific tax reports, monitors labor law changes, and ensures legal filing deadlines are met automatically.
+                    </p>
+                    <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full">SME Compliance</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section id="mission" class="bg-white py-20 md:py-24 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-bm-primary">Our Strategic Foundation</h3>
+                <div class="separator"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Vision -->
+                <div class="p-8 bg-gray-50 rounded-xl shadow-2xl border-l-4 border-bm-accent">
+                    <h3 class="text-2xl font-bold text-bm-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-3 bm-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20.73L3 14.5m14 0l-7 6.23m7-6.23V3m-7 11.5v-6.5"/></svg>
+                        Vision: Technological Sovereignty
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To build India's definitive local AI ecosystem, ensuring that cutting-edge technology is a universal utility, providing economic sovereignty to small businesses against global competitors.
+                    </p>
+                </div>
+
+                <!-- Core Values -->
+                <div class="p-8 bg-gray-50 rounded-xl shadow-2xl border-l-4 border-bm-accent">
+                    <h3 class="text-2xl font-bold text-bm-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-3 bm-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18V6m0 0l-4 4m4-4l4 4"/></svg>
+                        Core Values: Ethical & Local
+                    </h3>
+                    <ul class="text-gray-700 space-y-3 list-disc pl-5 leading-relaxed">
+                        <li>Local Context: Fluent support for regional languages and cultural business norms.</li>
+                        <li>Data Integrity: Highest commitment to Indian data privacy and security standards.</li>
+                        <li>Simplicity: User-friendly interfaces that require zero technical expertise.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact/CTA Footer Section -->
+    <section id="contact" class="bg-bm-primary py-20 px-4">
+        <div class="container mx-auto text-center text-white max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+                Ready to Deploy Your Custom AI Agent?
+            </h2>
+            <p class="text-xl font-light mb-10 opacity-90">
+                Let's discuss how Betelmatrix can automate your operations and unlock new market potential.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <!-- Email Button -->
+                <a href="mailto:varunmulay2004@gmail.com" 
+                   class="bg-bm-accent text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-opacity-80 transition duration-300 transform hover:scale-[1.02] inline-flex items-center justify-center border-2 border-bm-accent">
+                    <!-- Mail Icon SVG -->
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                    Email Me
+                </a>
+                
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/varun-mulay-8954aa333" target="_blank" rel="noopener noreferrer"
+                   class="bg-transparent text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-white/10 transition duration-300 transform hover:scale-[1.02] inline-flex items-center justify-center border-2 border-white">
+                    <!-- LinkedIn Icon SVG -->
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.567-4 0v5.604h-3v-11h3v1.765c1.397-2.793 7-3.004 7 2.636v6.6z"/></svg>
+                    LinkedIn
+                </a>
+
+                <!-- LiveKit Portfolio Button -->
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                   class="bg-transparent text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-white/10 transition duration-300 transform hover:scale-[1.02] inline-flex items-center justify-center border-2 border-white">
+                    <!-- Briefcase Icon for Portfolio -->
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                    LiveKit Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 px-4">
+        <div class="container mx-auto text-center text-sm">
+            <p class="mb-2">&copy; 2025 Betelmatrix AI Agents. All rights reserved.</p>
+            <p class="space-x-4 text-gray-400">
+                <a href="mailto:varunmulay2004@gmail.com" class="hover:text-bm-accent transition duration-300">varunmulay2004@gmail.com</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://www.linkedin.com/in/varun-mulay-8954aa333" target="_blank" rel="noopener noreferrer" class="hover:text-bm-accent transition duration-300">LinkedIn Profile</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
